@@ -1,0 +1,20 @@
+Use autostart for your desktop environment:
+
+    For GNOME, put a .desktop file in ~/.config/autostart/ or /etc/xdg/autostart/.
+
+    The .desktop file points to your script and will launch it once the graphical session starts.
+
+Example myapp.desktop in ~/.config/autostart/:
+
+[Desktop Entry]
+Type=Application
+Exec=/path/to/your/script.sh
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=My Script
+Comment=Start my script at login
+
+Make sure your script is executable (chmod +x script.sh).
+
+mkdir -p ~/.config/autostart/
